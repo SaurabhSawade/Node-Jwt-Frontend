@@ -8,7 +8,7 @@ export default function Protected() {
   const fetchProtected = async () => {
     try {
       const token = localStorage.getItem('accessToken');
-      const res = await axios.get('http://localhost:4000/api/protected', {
+      const res = await axios.get('https://node-jwt-backend.onrender.com/api/protected', {
         headers: {
           Authorization: `Bearer ${token}`
         }

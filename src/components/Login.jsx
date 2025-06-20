@@ -13,7 +13,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://node-jwt-backend.onrender.com/login', formData);
+      const res = await axios.post('https://node-jwt-backend.onrender.com/api/login', formData);
       localStorage.setItem('accessToken', res.data.accessToken);
       setMessage('Login successful');
     } catch (err) {

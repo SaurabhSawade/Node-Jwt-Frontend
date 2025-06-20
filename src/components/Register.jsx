@@ -13,7 +13,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://node-jwt-backend.onrender.com/register', formData);
+      const res = await axios.post('https://node-jwt-backend.onrender.com/api/register', formData);
       setMessage(res.data.message);
     } catch (err) {
       setMessage(err.response?.data?.message || 'Registration failed');
